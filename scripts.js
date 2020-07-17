@@ -23,6 +23,9 @@ var projects=[
     }   
 ]
 
+// type buttons element 
+var typeButtons = document.querySelector('#typeButtons')
+
 // projects element
 var projectsDiv = document.querySelector('.projectsContainer')
 
@@ -56,4 +59,17 @@ for( i = 0; i < projects.length; i++){
 
     // append div to projects element
     projectsDiv.appendChild(aContainer);
+
+    // check if type button exists
+    var checkButton = document.querySelector('button[value="' + projects[i].type + '"]');
+    if( checkButton == null ) {
+
+        // create button
+        var button = document.createElement('button');
+        button.innerHTML = projects[i].type;
+        button.setAttribute('value', projects[i].type);
+
+        // append child to type buttons
+        typeButtons.appendChild(button);
+    }
 }
