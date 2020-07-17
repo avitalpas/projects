@@ -59,6 +59,26 @@ var certificates = [
         name: 'DBA Master',
         file: 'cert/DBA Master.pdf',
         img: 'cert/DBA Master.png'
+    },{
+        name: 'API Documentation with JSON and XML',
+        file: 'cert/API Documentation with JSON and XML.pdf',
+        img: 'cert/API Documentation with JSON and XML.png'
+    },{
+        name: 'HTML',
+        file: 'cert/HTML.pdf',
+        img: 'cert/HTML.png'
+    },{
+        name: 'Java',
+        file: 'cert/Java.pdf',
+        img: 'cert/Java.png'
+    },{
+        name: 'JavaScript Essential Training',
+        file: 'cert/JavaScript Essential Training.pdf',
+        img: 'cert/JavaScript Essential Training.png'
+    },{
+        name: 'SQL',
+        file: 'cert/SQL.pdf',
+        img: 'cert/SQL.png'
     }
 ]
 
@@ -116,7 +136,6 @@ for (i = 0; i < projects.length; i++) {
 }
 
 // add certificates array to certificates element
-
 // get element
 var certDiv = document.querySelector('.certificates');
 
@@ -128,6 +147,7 @@ for (i = 0; i < certificates.length; i++) {
     curA.classList.add('col-md-6');
     curA.classList.add('col-lg-4');
     curA.classList.add('col-xl-3');
+    curA.classList.add('certDiv');
     curA.setAttribute('data-id', i);
 
     // create img element

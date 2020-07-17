@@ -81,7 +81,6 @@ p{
     padding: 0;
 }
 
-
 .projectImg{
     height: 250px;
     cursor: pointer;
@@ -106,4 +105,41 @@ p{
 
 .projectImg:hover{
     filter: brightness(50%)
+}
+
+/* certificates */
+
+.certDiv{
+    height: fit-content;
+    width: fit-content;
+    max-width: max-content;
+    margin: 15px;
+    box-shadow: 0 0 25px gray;
+    padding: 0;
+}
+
+.certDiv img{
+    height: 250px;
+    cursor: pointer;
+    transition: 0.7s;
+    text-align: center;
+    background-size: contain;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.certDiv img:hover{
+    filter: brightness(50%)
+}
+
+.certDiv p{
+    color:white;
+    background-color: rgb(155, 4, 4);
+    text-align: center;
+    transition: 0.5s;
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
