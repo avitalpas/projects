@@ -16,11 +16,41 @@ var projects=[
         url: 'https://avitalpas.github.io/Fibonacci/',
         type:'JavaScript'
     },{
+        name: 'Lazy block',
+        background: 'img/LazyBlock.png',
+        url: 'https://avitalpas.github.io/LazyBlock/',
+        type:'CSS'
+    },{
         name: 'Booking',
         background: 'img/booking.png',
         url: 'https://avitalpas.github.io/booking',
         type:'CSS'
-    }   
+    },{
+        name: 'JavaScript practice',
+        background: 'img/JavaScriptPractice.png',
+        url: 'https://avitalpas.github.io/JavaScriptPractice',
+        type:'CSS'
+    },{
+        name: 'User Management',
+        background: 'img/UserManagement.png',
+        url: 'https://avitalpas.github.io/UserManagement',
+        type:'CSS'
+    },{
+        name: 'NDSN',
+        background: 'img/NDSN.png',
+        url: 'https://ndsn.net/',
+        type:'WordPress'
+    },{
+        name: "Dani'z Music Studio",
+        background: 'img/danizstudio.png',
+        url: 'https://www.danizstudio.co.il/',
+        type:'Site123'
+    },{
+        name: "Natalya's Studio",
+        background: "img/Natalya'sStudio.png",
+        url: 'https://plando.co.il/dashboard',
+        type:'External'
+    },
 ]
 
 // type buttons element 
@@ -69,7 +99,7 @@ for( i = 0; i < projects.length; i++){
         var button = document.createElement('button');
         button.innerHTML = projects[i].type;
         button.setAttribute('value', projects[i].type);
-        button.setAttribute('onclick',' changeActive("' + projects[i].type + '")');
+        button.setAttribute('onclick','changeActive("' + projects[i].type + '")');
 
         // append child to type buttons
         typeButtons.appendChild(button);
