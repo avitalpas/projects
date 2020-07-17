@@ -39,6 +39,7 @@ for( i = 0; i < projects.length; i++){
     aContainer.classList.add('col-lg-4');
     aContainer.classList.add('col-xl-3');
     aContainer.setAttribute('data-id', i);
+    aContainer.setAttribute('data-type', projects[i].type);
     aContainer.setAttribute('href', projects[i].url);
     aContainer.setAttribute('target', '_blank');
 
@@ -68,8 +69,20 @@ for( i = 0; i < projects.length; i++){
         var button = document.createElement('button');
         button.innerHTML = projects[i].type;
         button.setAttribute('value', projects[i].type);
+        button.setAttribute('onclick',' changeActive("' + projects[i].type + '")');
 
         // append child to type buttons
         typeButtons.appendChild(button);
     }
+}
+
+function changeActive(value){
+
+    // get current active button
+    var curActive = document.querySelector('.active');
+    curActive.classList.remove('active');
+
+    // set current active
+    document.querySelector('button[value="' + value + '"]').classList.add('active')
+
 }
