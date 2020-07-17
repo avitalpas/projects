@@ -76,6 +76,7 @@ for( i = 0; i < projects.length; i++){
     }
 }
 
+// show products by clicked tipe
 function changeActive(value){
 
     // get current active button
@@ -84,5 +85,19 @@ function changeActive(value){
 
     // set current active
     document.querySelector('button[value="' + value + '"]').classList.add('active')
+
+    // hide all not relevant
+    var links = document.querySelectorAll('.projectDiv ');
+
+    for( let i = 0; i < links.length; i++ ){
+
+        // show all 
+        links[i].hidden = false;
+
+        if( value != 'All'){
+            // hide if not relevant
+            if( links[i].getAttribute('data-type') != value ) links[i].hidden = true;
+        }
+    }
 
 }
