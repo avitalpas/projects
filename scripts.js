@@ -1,56 +1,65 @@
 // projects array
-var projects=[
+var projects = [
     {
         name: 'Sudoku',
         background: 'img/sudoku.png',
         url: 'https://avitalpas.github.io/Sudoku',
-        type:'JavaScript'
-    },{
+        type: 'JavaScript'
+    }, {
         name: 'Smart House',
         background: 'img/smartHouse.png',
         url: 'https://avitalpas.github.io/smarthouse',
-        type:'React'
-    },{
+        type: 'React'
+    }, {
         name: 'Fibonacci',
         background: 'img/Fibonacci.png',
         url: 'https://avitalpas.github.io/Fibonacci/',
-        type:'JavaScript'
-    },{
+        type: 'JavaScript'
+    }, {
         name: 'Lazy block',
         background: 'img/LazyBlock.png',
         url: 'https://avitalpas.github.io/LazyBlock/',
-        type:'CSS'
-    },{
+        type: 'CSS'
+    }, {
         name: 'Booking',
         background: 'img/booking.png',
         url: 'https://avitalpas.github.io/booking',
-        type:'CSS'
-    },{
+        type: 'CSS'
+    }, {
         name: 'JavaScript practice',
         background: 'img/JavaScriptPractice.png',
         url: 'https://avitalpas.github.io/JavaScriptPractice',
-        type:'CSS'
-    },{
+        type: 'CSS'
+    }, {
         name: 'User Management',
         background: 'img/UserManagement.png',
         url: 'https://avitalpas.github.io/UserManagement',
-        type:'CSS'
-    },{
+        type: 'CSS'
+    }, {
         name: 'NDSN',
         background: 'img/NDSN.png',
         url: 'https://ndsn.net/',
-        type:'WordPress'
-    },{
+        type: 'WordPress'
+    }, {
         name: "Dani'z Music Studio",
         background: 'img/danizstudio.png',
         url: 'https://www.danizstudio.co.il/',
-        type:'Site123'
-    },{
+        type: 'Site123'
+    }, {
         name: "Natalya's Studio",
         background: "img/Natalya'sStudio.png",
         url: 'https://plando.co.il/dashboard',
-        type:'External'
+        type: 'External'
     },
+]
+
+// certificates array
+var certificates = [
+    {
+        name: 'DBA Master',
+        file: 'cert/DBA Master.pdf',
+        img: 'cert/DBA Master.png'
+    }
 ]
 
 // type buttons element 
@@ -59,8 +68,8 @@ var typeButtons = document.querySelector('#typeButtons')
 // projects element
 var projectsDiv = document.querySelector('.projectsContainer')
 
-// add projects array to projects element 
-for( i = 0; i < projects.length; i++){
+// add projects array to projects element and set types
+for (i = 0; i < projects.length; i++) {
 
     // create div element
     var aContainer = document.createElement('a');
@@ -93,21 +102,52 @@ for( i = 0; i < projects.length; i++){
 
     // check if type button exists
     var checkButton = document.querySelector('button[value="' + projects[i].type + '"]');
-    if( checkButton == null ) {
+    if (checkButton == null) {
 
         // create button
         var button = document.createElement('button');
         button.innerHTML = projects[i].type;
         button.setAttribute('value', projects[i].type);
-        button.setAttribute('onclick','changeActive("' + projects[i].type + '")');
+        button.setAttribute('onclick', 'changeActive("' + projects[i].type + '")');
 
         // append child to type buttons
         typeButtons.appendChild(button);
     }
 }
 
+// add certificates array to certificates element
+
+// get element
+var certDiv = document.querySelector('.certificates');
+
+for (i = 0; i < certificates.length; i++) {
+
+    // create a element 
+    var curA = document.createElement('a')
+    curA.classList.add('certDiv');
+    curA.classList.add('col-md-6');
+    curA.classList.add('col-lg-4');
+    curA.classList.add('col-xl-3');
+    curA.setAttribute('data-id', i);
+
+    // create img element
+    var curImg = document.createElement('img')
+    curImg.setAttribute('src', certificates[i].img)
+
+    // create header element
+    var curP = document.createElement('p')
+    curP.innerHTML = certificates[i].name;
+
+    // append child
+    curA.appendChild(curImg)
+    curA.appendChild(curP)
+    certDiv.appendChild(curA)
+
+    curA.hidden = true;
+}
+
 // show products by clicked tipe
-function changeActive(value){
+function changeActive(value) {
 
     // get current active button
     var curActive = document.querySelector('.active');
@@ -116,18 +156,44 @@ function changeActive(value){
     // set current active
     document.querySelector('button[value="' + value + '"]').classList.add('active')
 
-    // hide all not relevant
-    var links = document.querySelectorAll('.projectDiv ');
+    // if cert clicked
+    if (value == 'cert') {
 
-    for( let i = 0; i < links.length; i++ ){
+        // hide projects
+        // hide all not relevant
+        var links = document.querySelectorAll('.projectDiv');
+        for (let i = 0; i < links.length; i++) {
+            // show all 
+            links[i].hidden = true;
+        }
 
-        // show all 
-        links[i].hidden = false;
-
-        if( value != 'All'){
-            // hide if not relevant
-            if( links[i].getAttribute('data-type') != value ) links[i].hidden = true;
+        // show certificates
+        var certElements = document.querySelectorAll('.certificates a')
+        for (let i = 0; i < certElements.length; i++) {
+            certElements[i].hidden = false;
         }
     }
+    else {
+        // hide all not relevant
+        var links = document.querySelectorAll('.projectDiv ');
+
+        // hide certificates
+        var certElements = document.querySelectorAll('.certificates a')
+        for (let i = 0; i < certElements.length; i++) {
+            certElements[i].hidden = true;
+        }
+
+        for (let i = 0; i < links.length; i++) {
+            // show all 
+            links[i].hidden = false;
+
+            if (value != 'All') {
+                // hide if not relevant
+                if (links[i].getAttribute('data-type') != value) links[i].hidden = true;
+            }
+        }
+    }
+
+
 
 }
