@@ -1,3 +1,7 @@
+// ***********************************************
+//                  ARRAYS
+// ***********************************************
+
 // projects array
 var projects = [
     {
@@ -41,6 +45,11 @@ var projects = [
         url: 'https://ndsn.net/',
         type: 'WordPress'
     }, {
+        name: 'NDSN remote support',
+        background: 'img/NDSN remote support.png',
+        url: 'https://4455.co.il',
+        type: 'JavaScript'
+    },{
         name: "Dani'z Music Studio",
         background: 'img/danizstudio.png',
         url: 'https://www.danizstudio.co.il/',
@@ -82,20 +91,34 @@ var certificates = [
     }
 ]
 
+// ***********************************************
+//                  Global elements
+// ***********************************************
+
 // type buttons element 
-var typeButtons = document.querySelector('#typeButtons')
+var typeButtons = document.querySelector('#typeButtons');
 
 // projects element
-var projectsDiv = document.querySelector('.projectsContainer')
+var projectsDiv = document.querySelector('.projectsContainer');
 
-// add projects array to projects element and set types
+// certificates element
+var certDiv = document.querySelector('.certificates');
+
+
+
+// ***************************************************************************
+//          Inizialize projects, certificates and type buttons
+// ***************************************************************************
+
+// project elements and type buttons
 for (i = 0; i < projects.length; i++) {
 
-    // create div element
+    // create a project element
     var aContainer = document.createElement('a');
     aContainer.classList.add('projectDiv');
     aContainer.classList.add('col-md-6');
     aContainer.classList.add('col-lg-4');
+    aContainer.classList.add('fade-in-fwd');
     aContainer.classList.add('col-xl-3');
     aContainer.setAttribute('data-id', i);
     aContainer.setAttribute('data-type', projects[i].type);
@@ -108,16 +131,14 @@ for (i = 0; i < projects.length; i++) {
     img.classList.add('projectImg')
     img.classList.add('img-fluid')
 
-    // create a element
+    // create p element
     var p = document.createElement('p');
     p.innerHTML = projects[i].name;
     p.setAttribute('data-id', i)
 
-    // add img and a to div
+    // append childs to projects
     aContainer.appendChild(img);
     aContainer.appendChild(p);
-
-    // append div to projects element
     projectsDiv.appendChild(aContainer);
 
     // check if type button exists
@@ -135,10 +156,7 @@ for (i = 0; i < projects.length; i++) {
     }
 }
 
-// add certificates array to certificates element
-// get element
-var certDiv = document.querySelector('.certificates');
-
+// certificate elements
 for (i = 0; i < certificates.length; i++) {
 
     // create a element 
@@ -149,6 +167,7 @@ for (i = 0; i < certificates.length; i++) {
     curA.classList.add('col-xl-3');
     curA.classList.add('certDiv');
     curA.setAttribute('data-id', i);
+    curA.setAttribute('onclick', 'showCertPreview('+ i +')')
 
     // create img element
     var curImg = document.createElement('img')
@@ -163,57 +182,114 @@ for (i = 0; i < certificates.length; i++) {
     curA.appendChild(curP)
     certDiv.appendChild(curA)
 
+    // hide at beggining
     curA.hidden = true;
 }
 
-// show products by clicked tipe
+// ***********************************************
+//                  Show / hide functions
+// ***********************************************
+
+// all projects
+var projectDivs = document.querySelectorAll('.projectDiv');
+
+// all certificates
+var certElements = document.querySelectorAll('.certificates a')
+
+// change by menu click
 function changeActive(value) {
 
-    // get current active button
-    var curActive = document.querySelector('.active');
-    curActive.classList.remove('active');
-
-    // set current active
-    document.querySelector('button[value="' + value + '"]').classList.add('active')
+    setActive(value);
 
     // if cert clicked
     if (value == 'cert') {
+        hideAllProjects();
+        showAllCertificates()
+    }
+    // if all clicked
+    else if( value == 'All') {
 
-        // hide projects
-        // hide all not relevant
-        var links = document.querySelectorAll('.projectDiv');
-        for (let i = 0; i < links.length; i++) {
-            // show all 
-            links[i].hidden = true;
-        }
+        hideAllCertificates();
+        showAllProjects();
+    }
+    // if specific type clicked
+    else{
+        hideAllCertificates();
+        hideAllProjects();
+        showProjectByValue(value);
+    }
+}
 
-        // show certificates
-        var certElements = document.querySelectorAll('.certificates a')
-        for (let i = 0; i < certElements.length; i++) {
-            certElements[i].hidden = false;
+function showCertPreview(id){
+    var preview = document.querySelector('.certPreview');
+    var previewImg = document.querySelector('.certPreview img');
+    previewImg.setAttribute('src', certificates[id].img)
+    preview.hidden = false;
+}
+
+function hideCertPreview(){
+    var preview = document.querySelector('.certPreview');
+    preview.hidden = true;
+}
+
+function setActive(value){
+    // remove current active button
+    var curActive = document.querySelector('.active');
+    curActive.classList.remove('active');
+
+    // set new active
+    document.querySelector('button[value="' + value + '"]').classList.add('active')
+}
+
+function hideAllProjects(){
+
+    console.log('hiding all projects')
+    for (let i = 0; i < projectDivs.length; i++) {
+        console.log('project: ' + i)
+        projectDivs[i].classList.remove('fade-in-fwd');
+        projectDivs[i].classList.add('fade-out-bck');
+        projectDivs[i].hidden = true;
+    }
+
+}
+
+function showAllProjects(){
+
+    console.log('showing all projects')
+    for (let i = 0; i < projectDivs.length; i++) {
+        console.log('project: ' + i)
+        projectDivs[i].hidden = false;
+        projectDivs[i].classList.remove('fade-out-bck');
+        projectDivs[i].classList.add('fade-in-fwd');
+    }
+
+}
+
+function showProjectByValue(value){
+    hideAllProjects();
+
+    for (let i = 0; i < projectDivs.length; i++) {
+        if( projectDivs[i].getAttribute('data-type') == value ){
+            console.log('project: ' + i)
+            projectDivs[i].hidden = false;
+            projectDivs[i].classList.remove('fade-out-bck');
+            projectDivs[i].classList.add('fade-in-fwd');
         }
     }
-    else {
-        // hide all not relevant
-        var links = document.querySelectorAll('.projectDiv ');
+}
 
-        // hide certificates
-        var certElements = document.querySelectorAll('.certificates a')
-        for (let i = 0; i < certElements.length; i++) {
-            certElements[i].hidden = true;
-        }
-
-        for (let i = 0; i < links.length; i++) {
-            // show all 
-            links[i].hidden = false;
-
-            if (value != 'All') {
-                // hide if not relevant
-                if (links[i].getAttribute('data-type') != value) links[i].hidden = true;
-            }
-        }
+function showAllCertificates(){
+    for (let i = 0; i < certElements.length; i++) {
+        certElements[i].hidden = false;
+        certElements[i].classList.remove('fade-out-bck')
+        certElements[i].classList.add('fade-in-fwd')
     }
+}
 
-
-
+function hideAllCertificates(){
+    for (let i = 0; i < certElements.length; i++) {
+        certElements[i].hidden = true;
+        certElements[i].classList.add('fade-out-bck')
+        certElements[i].classList.remove('fade-in-fwd')
+    }
 }
