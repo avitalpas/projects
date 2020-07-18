@@ -5,6 +5,26 @@
 // projects array
 var projects = [
     {
+        name: 'NDSN',
+        background: 'img/NDSN.png',
+        url: 'https://ndsn.net/',
+        type: 'WordPress'
+    }, {
+        name: 'NDSN remote support',
+        background: 'img/NDSN remote support.png',
+        url: 'https://4455.co.il',
+        type: 'JavaScript'
+    },{
+        name: "Dani'z Music Studio",
+        background: 'img/danizstudio.png',
+        url: 'https://www.danizstudio.co.il/',
+        type: 'Site123'
+    }, {
+        name: 'Fibonacci',
+        background: 'img/Fibonacci.png',
+        url: 'https://avitalpas.github.io/Fibonacci/',
+        type: 'JavaScript'
+    },{
         name: 'Sudoku',
         background: 'img/sudoku.png',
         url: 'https://avitalpas.github.io/Sudoku',
@@ -14,11 +34,6 @@ var projects = [
         background: 'img/smartHouse.png',
         url: 'https://avitalpas.github.io/smarthouse',
         type: 'React'
-    }, {
-        name: 'Fibonacci',
-        background: 'img/Fibonacci.png',
-        url: 'https://avitalpas.github.io/Fibonacci/',
-        type: 'JavaScript'
     }, {
         name: 'Lazy block',
         background: 'img/LazyBlock.png',
@@ -39,27 +54,12 @@ var projects = [
         background: 'img/UserManagement.png',
         url: 'https://avitalpas.github.io/UserManagement',
         type: 'CSS'
-    }, {
-        name: 'NDSN',
-        background: 'img/NDSN.png',
-        url: 'https://ndsn.net/',
-        type: 'WordPress'
-    }, {
-        name: 'NDSN remote support',
-        background: 'img/NDSN remote support.png',
-        url: 'https://4455.co.il',
-        type: 'JavaScript'
     },{
-        name: "Dani'z Music Studio",
-        background: 'img/danizstudio.png',
-        url: 'https://www.danizstudio.co.il/',
-        type: 'Site123'
-    }, {
         name: "Natalya's Studio",
         background: "img/Natalya'sStudio.png",
         url: 'https://plando.co.il/dashboard',
         type: 'External'
-    },
+    }
 ]
 
 // certificates array
