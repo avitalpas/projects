@@ -25,6 +25,11 @@ var projects = [
         url: 'https://avitalpas.github.io/Fibonacci/',
         type: 'JavaScript'
     },{
+        name: 'Goldfish Kids',
+        background: 'img/GoldfishKids.png',
+        url: 'https://1977866.site123.me/',
+        type: 'Site123'
+    },{
         name: 'Sudoku',
         background: 'img/sudoku.png',
         url: 'https://avitalpas.github.io/Sudoku',
