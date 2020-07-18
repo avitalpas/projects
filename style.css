@@ -207,7 +207,7 @@ p{
 @-webkit-keyframes fade-out-bck{0%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}100%{-webkit-transform:translateZ(-80px);transform:translateZ(-80px);opacity:0}}@keyframes fade-out-bck{0%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}100%{-webkit-transform:translateZ(-80px);transform:translateZ(-80px);opacity:0}}
 
 /* mobile */
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .certPreview{
         display: none;
     }
