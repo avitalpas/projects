@@ -27,6 +27,8 @@ p{
     margin: 0;
 }
 
+/* header */
+
 .header{
     position: fixed;
     top: 0;
@@ -208,5 +210,9 @@ p{
 @media screen and (max-width: 768px) {
     .certPreview{
         display: none;
+    }
+
+    #typeButtons button{
+        font-size: 12px;
     }
 }
