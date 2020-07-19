@@ -30,7 +30,7 @@ var projects = [
         favicon: 'img/favicons/Fibonnaci.png',
         background: 'img/Fibonacci.png',
         color: 'black',
-        url: 'https://avitalpas.github.io/Fibonacci/',
+        url: 'https://avitalpas.github.io/FibonacciCheck/',
         type: 'JavaScript'
     },{
         name: 'Goldfish Kids',
