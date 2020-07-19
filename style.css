@@ -111,6 +111,7 @@ p{
 
 .projectDiv .projectImg{
     height: 250px;
+    max-width: 360px;
     z-index: 4;
     transition: .5s ease-in-out;
 }

@@ -9,20 +9,20 @@ var projects = [
         favicon: 'img/favicons/NDSN.png',
         background: 'img/NDSN.png',
         url: 'https://ndsn.net/',
-        color: 'black',
+        color: '#3F3F3F',
         type: 'WordPress'
     }, {
         name: 'NDSN remote support',
         favicon: 'img/favicons/NDSN.png',
         background: 'img/NDSN remote support.png',
-        color: 'black',
+        color: '#3F3F3F',
         url: 'https://4455.co.il',
         type: 'JavaScript'
     },{
         name: "Dani'z Music Studio",
         favicon: 'img/favicons/DanizMusic.ico',
         background: 'img/danizstudio.png',
-        color: 'light blue',
+        color: '#37729B',
         url: 'https://www.danizstudio.co.il/',
         type: 'Site123'
     }, {
@@ -43,7 +43,7 @@ var projects = [
         name: 'Sudoku',
         favicon: 'img/favicons/Sudoku.ico',
         background: 'img/sudoku.png',
-        color: 'dark blue',
+        color: '#040404',
         url: 'https://avitalpas.github.io/Sudoku',
         type: 'JavaScript'
     }, {
