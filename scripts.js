@@ -9,39 +9,46 @@ var projects = [
         favicon: 'img/favicons/NDSN.png',
         background: 'img/NDSN.png',
         url: 'https://ndsn.net/',
+        color: 'black',
         type: 'WordPress'
     }, {
         name: 'NDSN remote support',
         favicon: 'img/favicons/NDSN.png',
         background: 'img/NDSN remote support.png',
+        color: 'black',
         url: 'https://4455.co.il',
         type: 'JavaScript'
     },{
         name: "Dani'z Music Studio",
         favicon: 'img/favicons/DanizMusic.ico',
         background: 'img/danizstudio.png',
+        color: 'light blue',
         url: 'https://www.danizstudio.co.il/',
         type: 'Site123'
     }, {
         name: 'Fibonacci',
         favicon: 'img/favicons/Fibonnaci.png',
         background: 'img/Fibonacci.png',
+        color: 'black',
         url: 'https://avitalpas.github.io/Fibonacci/',
         type: 'JavaScript'
     },{
         name: 'Goldfish Kids',
         favicon: 'img/favicons/GoldfishKids.png',
         background: 'img/GoldfishKids.png',
+        color: '#F54B00',
         url: 'https://1977866.site123.me/',
         type: 'Site123'
     },{
         name: 'Sudoku',
         favicon: 'img/favicons/Sudoku.ico',
         background: 'img/sudoku.png',
+        color: 'dark blue',
         url: 'https://avitalpas.github.io/Sudoku',
         type: 'JavaScript'
     }, {
         name: 'Smart House',
+        color: '#A12A99',
         favicon: 'img/favicons/SmartHouse.png',
         background: 'img/smartHouse.png',
         url: 'https://avitalpas.github.io/smarthouse',
@@ -49,30 +56,35 @@ var projects = [
     }, {
         name: 'Lazy block',
         favicon: 'img/favicons/LazySquare.png',
+        color: '#E13F1C',
         background: 'img/LazyBlock.png',
         url: 'https://avitalpas.github.io/LazyBlock/',
         type: 'CSS'
     }, {
         name: 'Booking',
         favicon: 'img/favicons/Booking.png',
+        color: '#243C69',
         background: 'img/booking.png',
         url: 'https://avitalpas.github.io/booking',
         type: 'CSS'
     }, {
         name: 'JavaScript practice',
         favicon: 'img/favicons/JavaScript.png',
+        color: '#83CD29',
         background: 'img/JavaScriptPractice.png',
         url: 'https://avitalpas.github.io/JavaScriptPractice',
         type: 'CSS'
     }, {
         name: 'User Management',
         favicon: 'img/favicons/Users Management.png',
+        color: 'black',
         background: 'img/UserManagement.png',
         url: 'https://avitalpas.github.io/UserManagement',
         type: 'CSS'
     },{
         name: "Natalya's Studio",
         favicon: 'img/favicons/NatalysStudio.png',
+        color: 'black',
         background: "img/Natalya'sStudio.png",
         url: 'https://plando.co.il/dashboard',
         type: 'External'
@@ -130,41 +142,42 @@ var certDiv = document.querySelector('.certificates');
 // project elements and type buttons
 for (i = 0; i < projects.length; i++) {
 
-    // create a project element
+    // create a project element    
     var aContainer = document.createElement('a');
     aContainer.classList.add('projectDiv');
-    aContainer.classList.add('col-md-6');
-    aContainer.classList.add('col-lg-4');
-    aContainer.classList.add('fade-in-fwd');
-    aContainer.classList.add('col-xl-3');
     aContainer.setAttribute('data-id', i);
     aContainer.setAttribute('data-type', projects[i].type);
     aContainer.setAttribute('href', projects[i].url);
     aContainer.setAttribute('target', '_blank');
 
-    // create img element
-    var img = document.createElement('img')
-    img.setAttribute('src', projects[i].background)
-    img.classList.add('projectImg')
-    img.classList.add('img-fluid')
+    aContainer.classList.add('col-md-6');
+    aContainer.classList.add('col-lg-4');
+    aContainer.classList.add('fade-in-fwd');
+    aContainer.classList.add('col-xl-3');
 
-    // create p & icon element
-    var headerDiv = document.createElement('div');
-    // headerDiv.setAttribute('data-id', i)
-    headerDiv.classList.add('projectHeader');
+    // header
+    var header = document.createElement('div');
+    header.classList.add('projectHeader');
 
-    var ico = document.createElement('img');
-    ico.setAttribute('src', projects[i].favicon);
+    var icon = document.createElement('img');
+    icon.src = projects[i].favicon;
 
     var p = document.createElement('p');
     p.innerHTML = projects[i].name;
+    p.style.color = projects[i].color;
 
-    headerDiv.appendChild(ico);
-    headerDiv.appendChild(p);
+    header.appendChild(icon);
+    header.appendChild(p);
+
+    // background
+    var img = document.createElement('img');
+    img.src = projects[i].background;
+    img.classList.add('projectImg');
+
 
     // append childs to projects
-    aContainer.appendChild(img);
-    aContainer.appendChild(headerDiv);
+    aContainer.appendChild(header)
+    aContainer.appendChild(img)
     projectsDiv.appendChild(aContainer);
 
     // check if type button exists

@@ -5,12 +5,7 @@ body{
     margin: 0;
     text-align: center;
     font-family: 'Rubik', sans-serif;
-    display: inline;
     color: black;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: linear-gradient(315deg, #3f0d12 0%, #a71d31 74%);
-    background-color: #3f0d12;     
 }
 
 a{
@@ -84,51 +79,48 @@ p{
 }
 
 .projectDiv{
-    height: fit-content;
     width: fit-content;
+    background-size: contain;
     max-width: max-content;
     margin: 15px;
     box-shadow: 0 0 25px gray;
     transition: .5s;
     padding: 0;
-}
-
-.projectImg{
-    height: 250px;
-    cursor: pointer;
-    transition: 0.7s;
     text-align: center;
-    background-size: contain;
-    border-top-left-radius: 3px;
-    transition: .5s;
-    border-top-right-radius: 3px;
+
 }
 
 .projectHeader{
-    background-color: rgb(255, 255, 255);
+    position: absolute;
+    font-size: 20px;
+    transition: .5s;
+    z-index: 5;
+    opacity: 0%;
+    top: 35%;
     text-align: center;
-    transition: 0.5s;
-    display: flex;
-    padding-top: 5px;
-    justify-content: center;
-    padding-bottom: 5px;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
+    width: 100%;
+    color: black;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.781);
+    padding: 5px;
 }
 
 .projectHeader img{
-    height: 25px;
-    margin: 5px;
+    height: 50px !important;
 }
 
-.projectHeader p{
-    color: black;
-    padding-top: 5px;
-    padding-bottom: 5px;
+.projectDiv .projectImg{
+    height: 250px;
+    z-index: 4;
+    transition: .5s ease-in-out;
 }
 
-.projectImg:hover{
-    filter: brightness(50%)
+.projectDiv:hover .projectImg{
+    filter: brightness(50%);
+}
+
+.projectDiv:hover .projectHeader{
+    opacity: 100%;
 }
 
 /* certificates */
