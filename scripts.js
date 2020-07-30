@@ -120,6 +120,50 @@ var certificates = [
     }
 ]
 
+// links
+var links = [
+    {
+        name: 'Google Fonts',
+        url: 'https://fonts.google.com'
+    },{
+        name: 'Color fom image',
+        url: 'https://image-color.com/'
+    },{
+        name: 'Elements animations 1',
+        url: 'https://animista.net/play/basic'
+    },{
+        name: 'Elements animations 2',
+        url: 'https://www.theappguruz.com/tag-tools/web/CSSAnimations/'
+    },{
+        name: 'Scroll animations',
+        url: 'http://michalsnik.github.io/aos/'
+    },{
+        name: 'Background gradients',
+        url: 'https://cssgradient.io/'
+    },{
+        name: '<hr> styles',
+        url: 'https://css-tricks.com/examples/hrs'
+    },{
+        name: 'Text to one line',
+        url: 'https://tools.knowledgewalls.com/online-multiline-to-single-line-converter'
+    },{
+        name: 'Images hover effects',
+        url: 'https://tympanus.net/Development/HoverEffectIdeas/'
+    },{
+        name: 'Buttons CSS hover effects',
+        url: 'https://freefrontend.com/css-button-hover-effects'
+    },{
+        name: 'Buttons JS hover effects 1',
+        url: 'https://codepen.io/kjbrum/pen/wBBLXx'
+    },{
+        name: 'Buttons JS hover effects 2',
+        url: 'https://codepen.io/davidicus/pen/emgQKJ'
+    },{
+        name: 'Button hovers with icon animation',
+        url: 'https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate1'
+    }
+]
+
 // ***********************************************
 //                  Global elements
 // ***********************************************
@@ -225,6 +269,11 @@ for (i = 0; i < certificates.length; i++) {
     curA.hidden = true;
 }
 
+// links
+for (i = 0; i < links.length; i++) {
+
+}
+
 // ***********************************************
 //                  Show / hide functions
 // ***********************************************
@@ -245,6 +294,10 @@ function changeActive(value) {
         hideAllProjects();
         showAllCertificates()
     }
+    else if( value == 'links' ){
+        hideAllProjects();
+        showLinks();
+    }
     // if all clicked
     else if( value == 'All') {
 
@@ -257,6 +310,12 @@ function changeActive(value) {
         hideAllProjects();
         showProjectByValue(value);
     }
+}
+
+function showLinks(){
+    // create main element
+    var link = document.createElement('a');
+    
 }
 
 function showCertPreview(id){
