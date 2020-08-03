@@ -124,43 +124,56 @@ var certificates = [
 var links = [
     {
         name: 'Google Fonts',
-        url: 'https://fonts.google.com'
+        url: 'https://fonts.google.com',
+        type: 'style'
     },{
-        name: 'Color fom image',
-        url: 'https://image-color.com/'
+        name: 'Color from image',
+        url: 'https://image-color.com/',
+        type: 'style'
     },{
         name: 'Elements animations 1',
-        url: 'https://animista.net/play/basic'
+        url: 'https://animista.net/play/basic',
+        type: 'animations'
     },{
         name: 'Elements animations 2',
-        url: 'https://www.theappguruz.com/tag-tools/web/CSSAnimations/'
+        url: 'https://www.theappguruz.com/tag-tools/web/CSSAnimations/',
+        type: 'animations'
     },{
         name: 'Scroll animations',
-        url: 'http://michalsnik.github.io/aos/'
+        url: 'http://michalsnik.github.io/aos/',
+        type: 'animations'
     },{
         name: 'Background gradients',
-        url: 'https://cssgradient.io/'
+        url: 'https://cssgradient.io/',
+        type: 'style'
     },{
-        name: '<hr> styles',
-        url: 'https://css-tricks.com/examples/hrs'
+        name: 'hr styles',
+        url: 'https://css-tricks.com/examples/hrs',
+        type: 'style'
     },{
         name: 'Text to one line',
-        url: 'https://tools.knowledgewalls.com/online-multiline-to-single-line-converter'
+        url: 'https://tools.knowledgewalls.com/online-multiline-to-single-line-converter',
+        type: 'essentials'
     },{
         name: 'Images hover effects',
-        url: 'https://tympanus.net/Development/HoverEffectIdeas/'
+        url: 'https://tympanus.net/Development/HoverEffectIdeas/',
+        type: 'css hovers'
     },{
         name: 'Buttons CSS hover effects',
-        url: 'https://freefrontend.com/css-button-hover-effects'
+        url: 'https://freefrontend.com/css-button-hover-effects',
+        type: 'css hovers'
     },{
         name: 'Buttons JS hover effects 1',
-        url: 'https://codepen.io/kjbrum/pen/wBBLXx'
+        url: 'https://codepen.io/kjbrum/pen/wBBLXx',
+        type: 'JS hovers'
     },{
         name: 'Buttons JS hover effects 2',
-        url: 'https://codepen.io/davidicus/pen/emgQKJ'
+        url: 'https://codepen.io/davidicus/pen/emgQKJ',
+        type: 'JS hovers'
     },{
         name: 'Button hovers with icon animation',
-        url: 'https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate1'
+        url: 'https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate1',
+        type: 'css hovers'
     }
 ]
 
@@ -174,13 +187,15 @@ var typeButtons = document.querySelector('#typeButtons');
 // projects element
 var projectsDiv = document.querySelector('.projectsContainer');
 
+// links element
+var linksContainter = document.querySelector('.linksContainter');
+
 // certificates element
 var certDiv = document.querySelector('.certificates');
 
 
-
 // ***************************************************************************
-//          Inizialize projects, certificates and type buttons
+//          Inizialize projects, links, certificates and type buttons
 // ***************************************************************************
 
 // project elements and type buttons
@@ -239,6 +254,51 @@ for (i = 0; i < projects.length; i++) {
     }
 }
 
+// links
+for (i = 0; i < links.length; i++) {
+    
+    // get current type category containter
+    var categoryContainter = document.getElementById(links[i].type);
+
+    // if categoryContainter create element and create the link
+    if( categoryContainter == null ){
+
+        // create categories
+        var category = document.createElement('div');
+        category.classList.add('linkCategory');
+        category.id = links[i].type;
+
+        // create type header
+        var header = document.createElement('h4');
+        header.innerHTML = links[i].type;
+        
+        // create new link
+        var a = document.createElement('a');
+        a.innerHTML = links[i].name;
+        a.href = links[i].url;
+        a.hidden = true;
+        a.target = '_blank';
+
+        // append childs
+        category.appendChild(header);
+        category.appendChild(a);
+        linksContainter.appendChild(category);
+    }
+    else{
+        // create new link
+        var a = document.createElement('a');
+        a.innerHTML = links[i].name;
+        a.href = links[i].url;
+        a.hidden = true;
+        a.target = '_blank';
+
+        // append childs
+        categoryContainter.appendChild(a);
+    }
+
+
+}
+
 // certificate elements
 for (i = 0; i < certificates.length; i++) {
 
@@ -248,7 +308,6 @@ for (i = 0; i < certificates.length; i++) {
     curA.classList.add('col-md-6');
     curA.classList.add('col-lg-4');
     curA.classList.add('col-xl-3');
-    curA.classList.add('certDiv');
     curA.setAttribute('data-id', i);
     curA.setAttribute('onclick', 'showCertPreview('+ i +')')
 
@@ -269,22 +328,24 @@ for (i = 0; i < certificates.length; i++) {
     curA.hidden = true;
 }
 
-// links
-for (i = 0; i < links.length; i++) {
-
-}
-
 // ***********************************************
 //                  Show / hide functions
 // ***********************************************
 
+// ------------ variables ------------
+
 // all projects
 var projectDivs = document.querySelectorAll('.projectDiv');
+
+// all projects
+var linksElements = document.querySelectorAll('.linksContainter a')
 
 // all certificates
 var certElements = document.querySelectorAll('.certificates a')
 
-// change by menu click
+// ------------ menu ------------
+
+// change active tab by menu click
 function changeActive(value) {
 
     setActive(value);
@@ -292,6 +353,7 @@ function changeActive(value) {
     // if cert clicked
     if (value == 'cert') {
         hideAllProjects();
+        hideLinks();
         showAllCertificates()
     }
     else if( value == 'links' ){
@@ -300,36 +362,20 @@ function changeActive(value) {
     }
     // if all clicked
     else if( value == 'All') {
-
+        hideLinks();
         hideAllCertificates();
         showAllProjects();
     }
     // if specific type clicked
     else{
+        hideLinks();
         hideAllCertificates();
         hideAllProjects();
         showProjectByValue(value);
     }
 }
 
-function showLinks(){
-    // create main element
-    var link = document.createElement('a');
-    
-}
-
-function showCertPreview(id){
-    var preview = document.querySelector('.certPreview');
-    var previewImg = document.querySelector('.certPreview img');
-    previewImg.setAttribute('src', certificates[id].img)
-    preview.hidden = false;
-}
-
-function hideCertPreview(){
-    var preview = document.querySelector('.certPreview');
-    preview.hidden = true;
-}
-
+// set active tab
 function setActive(value){
     // remove current active button
     var curActive = document.querySelector('.active');
@@ -338,6 +384,8 @@ function setActive(value){
     // set new active
     document.querySelector('button[value="' + value + '"]').classList.add('active')
 }
+
+// ------------ projects ------------
 
 function hideAllProjects(){
 
@@ -376,6 +424,25 @@ function showProjectByValue(value){
     }
 }
 
+// ------------ links ------------
+
+// show all links
+function showLinks(){
+    for (i = 0; i < linksElements.length; i++) {
+        linksElements[i].hidden = false;
+    }
+}
+
+// hide all links
+function hideLinks(){
+    for (i = 0; i < linksElements.length; i++) {
+        linksElements[i].hidden = true;
+    }
+}
+
+// ------------ certificates ------------
+
+// show all certificates
 function showAllCertificates(){
     for (let i = 0; i < certElements.length; i++) {
         certElements[i].hidden = false;
@@ -384,10 +451,25 @@ function showAllCertificates(){
     }
 }
 
+// hide all certificates
 function hideAllCertificates(){
     for (let i = 0; i < certElements.length; i++) {
         certElements[i].hidden = true;
         certElements[i].classList.add('fade-out-bck')
         certElements[i].classList.remove('fade-in-fwd')
     }
+}
+
+// show sertificate preview
+function showCertPreview(id){
+    var preview = document.querySelector('.certPreview');
+    var previewImg = document.querySelector('.certPreview img');
+    previewImg.setAttribute('src', certificates[id].img)
+    preview.hidden = false;
+}
+
+// hide certificates preview
+function hideCertPreview(){
+    var preview = document.querySelector('.certPreview');
+    preview.hidden = true;
 }

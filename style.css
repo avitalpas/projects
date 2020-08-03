@@ -124,6 +124,45 @@ p{
     opacity: 100%;
 }
 
+/* links */
+.linksContainter{
+    padding: 0 40px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    transition: .5s;
+}
+
+.linkCategory{
+    width: max-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.534);
+    border-radius: 7px;
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.609);
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
+.linkCategory h4{
+    border-bottom: 1px solid black;
+}
+
+.linkCategory a{
+    height: fit-content;
+    max-width: max-content;
+    padding: 10px 15px;
+    transition: .5s;
+    width: 100%;
+}
+
+.linksContainter a:hover{
+    background-color: rgba(128, 128, 128, 0.609);
+}
+
 /* certificates */
 .certificates{
     padding: 20px 60px;
