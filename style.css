@@ -139,28 +139,33 @@ p{
     display: flex;
     flex-direction: column;
     margin: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.534);
-    border-radius: 7px;
-    box-shadow: 0 0 10px rgba(128, 128, 128, 0.609);
-    padding-top: 15px;
-    padding-bottom: 15px;
+    border-radius: 7px 7px 0 0;
+    box-shadow: 0 0 15px rgba(128, 128, 128, 0.609);
+    text-align: center;
 
 }
 
 .linkCategory h4{
-    border-bottom: 1px solid black;
+    border-radius: 5px 5px 0 0;
+    color: white;
+    background-color: rgb(155, 4, 4);
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-weight: 400;
+    font-size: 20px;
 }
 
 .linkCategory a{
     height: fit-content;
-    max-width: max-content;
     padding: 10px 15px;
     transition: .5s;
     width: 100%;
+    text-align: center;
 }
 
 .linksContainter a:hover{
-    background-color: rgba(128, 128, 128, 0.609);
+    background-color: rgba(128, 128, 128, 0.157);
+    color: black;
 }
 
 /* certificates */

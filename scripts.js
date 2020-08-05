@@ -131,6 +131,18 @@ var links = [
         url: 'https://image-color.com/',
         type: 'style'
     },{
+        name: 'Button hovers with icon animation',
+        url: 'https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate1',
+        type: 'css hovers'
+    },{
+        name: 'Images hover effects',
+        url: 'https://tympanus.net/Development/HoverEffectIdeas/',
+        type: 'css hovers'
+    },{
+        name: 'Buttons CSS hover effects',
+        url: 'https://freefrontend.com/css-button-hover-effects',
+        type: 'css hovers'
+    },{
         name: 'Elements animations 1',
         url: 'https://animista.net/play/basic',
         type: 'animations'
@@ -155,14 +167,6 @@ var links = [
         url: 'https://tools.knowledgewalls.com/online-multiline-to-single-line-converter',
         type: 'essentials'
     },{
-        name: 'Images hover effects',
-        url: 'https://tympanus.net/Development/HoverEffectIdeas/',
-        type: 'css hovers'
-    },{
-        name: 'Buttons CSS hover effects',
-        url: 'https://freefrontend.com/css-button-hover-effects',
-        type: 'css hovers'
-    },{
         name: 'Buttons JS hover effects 1',
         url: 'https://codepen.io/kjbrum/pen/wBBLXx',
         type: 'JS hovers'
@@ -170,10 +174,6 @@ var links = [
         name: 'Buttons JS hover effects 2',
         url: 'https://codepen.io/davidicus/pen/emgQKJ',
         type: 'JS hovers'
-    },{
-        name: 'Button hovers with icon animation',
-        url: 'https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate1',
-        type: 'css hovers'
     }
 ]
 
