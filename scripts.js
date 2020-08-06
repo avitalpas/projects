@@ -73,7 +73,7 @@ var projects = [
         color: '#83CD29',
         background: 'img/JavaScriptPractice.png',
         url: 'https://avitalpas.github.io/JavaScriptPractice',
-        type: 'CSS'
+        type: 'JavaScript'
     }, {
         name: 'User Management',
         favicon: 'img/favicons/Users Management.png',
@@ -267,6 +267,7 @@ for (i = 0; i < links.length; i++) {
         var category = document.createElement('div');
         category.classList.add('linkCategory');
         category.id = links[i].type;
+        category.hidden = true;
 
         // create type header
         var header = document.createElement('h4');
@@ -289,7 +290,6 @@ for (i = 0; i < links.length; i++) {
         var a = document.createElement('a');
         a.innerHTML = links[i].name;
         a.href = links[i].url;
-        a.hidden = true;
         a.target = '_blank';
 
         // append childs
@@ -338,7 +338,7 @@ for (i = 0; i < certificates.length; i++) {
 var projectDivs = document.querySelectorAll('.projectDiv');
 
 // all projects
-var linksElements = document.querySelectorAll('.linksContainter a')
+var linksElements = document.querySelectorAll('.linkCategory')
 
 // all certificates
 var certElements = document.querySelectorAll('.certificates a')
@@ -357,6 +357,7 @@ function changeActive(value) {
         showAllCertificates()
     }
     else if( value == 'links' ){
+        hideAllCertificates();
         hideAllProjects();
         showLinks();
     }
