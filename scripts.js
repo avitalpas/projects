@@ -25,7 +25,14 @@ var projects = [
         color: '#37729B',
         url: 'https://www.danizstudio.co.il/',
         type: 'Site123'
-    }, {
+    },{
+        name: 'Movie Reviews',
+        favicon: 'img/favicons/movie-reviews.png',
+        background: 'img/movie-reviews.png',
+        color: 'black',
+        url: 'https://intense-castle-88427.herokuapp.com/',
+        type: 'Node.js'
+    },{
         name: 'Fibonacci',
         favicon: 'img/favicons/Fibonnaci.png',
         background: 'img/Fibonacci.png',
