@@ -18,35 +18,35 @@ var projects = [
         color: '#3F3F3F',
         url: 'https://4455.co.il',
         type: 'WordPress'
-    },{
+    }, {
         name: "Dani'z Music Studio",
         favicon: 'img/favicons/DanizMusic.ico',
         background: 'img/danizstudio.png',
         color: '#37729B',
         url: 'https://www.danizstudio.co.il/',
         type: 'Site123'
-    },{
+    }, {
         name: 'Movie Reviews',
         favicon: 'img/favicons/movie-reviews.png',
         background: 'img/movie-reviews.png',
         color: 'black',
         url: 'https://intense-castle-88427.herokuapp.com/',
         type: 'Node.js'
-    },{
+    }, {
         name: 'Fibonacci',
         favicon: 'img/favicons/Fibonnaci.png',
         background: 'img/Fibonacci.png',
         color: 'black',
         url: 'https://avitalpas.github.io/FibonacciCheck/',
         type: 'JavaScript'
-    },{
+    }, {
         name: 'Goldfish Kids',
         favicon: 'img/favicons/GoldfishKids.png',
         background: 'img/GoldfishKids.png',
         color: '#F54B00',
         url: 'https://1977866.site123.me/',
         type: 'Site123'
-    },{
+    }, {
         name: 'Sudoku',
         favicon: 'img/favicons/Sudoku.ico',
         background: 'img/sudoku.png',
@@ -88,14 +88,14 @@ var projects = [
         background: 'img/UserManagement.png',
         url: 'https://avitalpas.github.io/UserManagement',
         type: 'CSS'
-    },{
+    }, {
         name: "Natalya's Studio - self service",
         favicon: 'img/favicons/NatalysStudio.png',
         color: 'black',
         background: "img/natasha-self-service.png",
         url: 'https://plando.co.il/dashboard',
         type: 'External'
-    },{
+    }, {
         name: "Natalya's Studio - management",
         favicon: 'img/favicons/NatalysStudio.png',
         color: 'black',
@@ -117,27 +117,27 @@ var certificates = [
     //     file: 'cert/Back-End Development.pdf',
     //     img: 'cert/Back-End Development.png'
     // },
-    ,{
+    , {
         name: 'DBA Master',
         file: 'cert/DBA Master.pdf',
         img: 'cert/DBA Master.png'
-    },{
+    }, {
         name: 'API Documentation with JSON and XML',
         file: 'cert/API Documentation with JSON and XML.pdf',
         img: 'cert/API Documentation with JSON and XML.png'
-    },{
+    }, {
         name: 'HTML',
         file: 'cert/HTML.pdf',
         img: 'cert/HTML.png'
-    },{
+    }, {
         name: 'Java',
         file: 'cert/Java.pdf',
         img: 'cert/Java.png'
-    },{
+    }, {
         name: 'JavaScript Essential Training',
         file: 'cert/JavaScript Essential Training.pdf',
         img: 'cert/JavaScript Essential Training.png'
-    },{
+    }, {
         name: 'SQL',
         file: 'cert/SQL.pdf',
         img: 'cert/SQL.png'
@@ -149,55 +149,73 @@ var links = [
     {
         name: 'Google Fonts',
         url: 'https://fonts.google.com',
-        type: 'style'
-    },{
+        type: 'style',
+        icon: 'https://www.gstatic.com/images/branding/product/ico/google_fonts_blue_lodp.ico'
+    }, {
         name: 'Color from image',
         url: 'https://image-color.com/',
-        type: 'style'
-    },{
+        type: 'style',
+        icon: ''
+    }, {
         name: 'Button hovers with icon animation',
         url: 'https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate1',
-        type: 'css hovers'
-    },{
+        type: 'css hovers',
+        icon: ''
+    }, {
         name: 'Images hover effects',
         url: 'https://tympanus.net/Development/HoverEffectIdeas/',
-        type: 'css hovers'
-    },{
+        type: 'css hovers',
+        icon: ''
+    }, {
         name: 'Buttons CSS hover effects',
         url: 'https://freefrontend.com/css-button-hover-effects',
-        type: 'css hovers'
-    },{
+        type: 'css hovers',
+        icon: ''
+    }, {
         name: 'Elements animations 1',
         url: 'https://animista.net/play/basic',
-        type: 'animations'
-    },{
+        type: 'animations',
+        icon: ''
+    }, {
         name: 'Elements animations 2',
         url: 'https://www.theappguruz.com/tag-tools/web/CSSAnimations/',
-        type: 'animations'
-    },{
+        type: 'animations',
+        icon: ''
+    }, {
         name: 'Scroll animations',
         url: 'http://michalsnik.github.io/aos/',
-        type: 'animations'
-    },{
+        type: 'animations',
+        icon: ''
+    }, {
         name: 'Background gradients',
         url: 'https://cssgradient.io/',
-        type: 'style'
-    },{
+        type: 'style',
+        icon: ''
+    }, {
         name: 'hr styles',
         url: 'https://css-tricks.com/examples/hrs',
-        type: 'style'
-    },{
+        type: 'style',
+        icon: ''
+    }, {
+        name: 'Fontawsome',
+        url: 'https://fontawesome.com/',
+        type: 'essentials',
+        icon: ''
+    }, {
         name: 'Text to one line',
         url: 'https://tools.knowledgewalls.com/online-multiline-to-single-line-converter',
-        type: 'essentials'
-    },{
+        type: 'essentials',
+        icon: ''
+    }, {
         name: 'Buttons JS hover effects 1',
         url: 'https://codepen.io/kjbrum/pen/wBBLXx',
-        type: 'JS hovers'
-    },{
+        type: 'JS hovers',
+        icon: ''
+    }, {
         name: 'Buttons JS hover effects 2',
         url: 'https://codepen.io/davidicus/pen/emgQKJ',
-        type: 'JS hovers'
+        type: 'JS hovers',
+        icon: ''
     }
 ]
 
@@ -280,12 +298,12 @@ for (i = 0; i < projects.length; i++) {
 
 // links
 for (i = 0; i < links.length; i++) {
-    
+
     // get current type category containter
     var categoryContainter = document.getElementById(links[i].type);
 
     // if categoryContainter create element and create the link
-    if( categoryContainter == null ){
+    if (categoryContainter == null) {
 
         // create categories
         var category = document.createElement('div');
@@ -296,12 +314,16 @@ for (i = 0; i < links.length; i++) {
         // create type header
         var header = document.createElement('h4');
         header.innerHTML = links[i].type;
-        
+
+        // create icon
+        var icon = document.createElement('img')
+        icon.src = links[i].icon
+
         // create new link
         var a = document.createElement('a');
+        a.appendChild(icon)
         a.innerHTML = links[i].name;
         a.href = links[i].url;
-        a.hidden = true;
         a.target = '_blank';
 
         // append childs
@@ -309,7 +331,7 @@ for (i = 0; i < links.length; i++) {
         category.appendChild(a);
         linksContainter.appendChild(category);
     }
-    else{
+    else {
         // create new link
         var a = document.createElement('a');
         a.innerHTML = links[i].name;
@@ -333,7 +355,7 @@ for (i = 0; i < certificates.length; i++) {
     curA.classList.add('col-lg-4');
     curA.classList.add('col-xl-3');
     curA.setAttribute('data-id', i);
-    curA.setAttribute('onclick', 'showCertPreview('+ i +')')
+    curA.setAttribute('onclick', 'showCertPreview(' + i + ')')
 
     // create img element
     var curImg = document.createElement('img')
@@ -380,19 +402,19 @@ function changeActive(value) {
         hideLinks();
         showAllCertificates()
     }
-    else if( value == 'links' ){
+    else if (value == 'links') {
         hideAllCertificates();
         hideAllProjects();
         showLinks();
     }
     // if all clicked
-    else if( value == 'All') {
+    else if (value == 'All') {
         hideLinks();
         hideAllCertificates();
         showAllProjects();
     }
     // if specific type clicked
-    else{
+    else {
         hideLinks();
         hideAllCertificates();
         hideAllProjects();
@@ -401,7 +423,7 @@ function changeActive(value) {
 }
 
 // set active tab
-function setActive(value){
+function setActive(value) {
     // remove current active button
     var curActive = document.querySelector('.active');
     curActive.classList.remove('active');
@@ -412,7 +434,7 @@ function setActive(value){
 
 // ------------ projects ------------
 
-function hideAllProjects(){
+function hideAllProjects() {
 
     console.log('hiding all projects')
     for (let i = 0; i < projectDivs.length; i++) {
@@ -424,7 +446,7 @@ function hideAllProjects(){
 
 }
 
-function showAllProjects(){
+function showAllProjects() {
 
     console.log('showing all projects')
     for (let i = 0; i < projectDivs.length; i++) {
@@ -436,11 +458,11 @@ function showAllProjects(){
 
 }
 
-function showProjectByValue(value){
+function showProjectByValue(value) {
     hideAllProjects();
 
     for (let i = 0; i < projectDivs.length; i++) {
-        if( projectDivs[i].getAttribute('data-type') == value ){
+        if (projectDivs[i].getAttribute('data-type') == value) {
             console.log('project: ' + i)
             projectDivs[i].hidden = false;
             projectDivs[i].classList.remove('fade-out-bck');
@@ -452,14 +474,14 @@ function showProjectByValue(value){
 // ------------ links ------------
 
 // show all links
-function showLinks(){
-    for (i = 0; i < linksElements.length; i++) {
-        linksElements[i].hidden = false;
-    }
+function showLinks() {
+    linksElements.forEach((link) => {
+        link.hidden = false
+    })
 }
 
 // hide all links
-function hideLinks(){
+function hideLinks() {
     for (i = 0; i < linksElements.length; i++) {
         linksElements[i].hidden = true;
     }
@@ -468,7 +490,7 @@ function hideLinks(){
 // ------------ certificates ------------
 
 // show all certificates
-function showAllCertificates(){
+function showAllCertificates() {
     for (let i = 0; i < certElements.length; i++) {
         certElements[i].hidden = false;
         certElements[i].classList.remove('fade-out-bck')
@@ -477,7 +499,7 @@ function showAllCertificates(){
 }
 
 // hide all certificates
-function hideAllCertificates(){
+function hideAllCertificates() {
     for (let i = 0; i < certElements.length; i++) {
         certElements[i].hidden = true;
         certElements[i].classList.add('fade-out-bck')
@@ -486,7 +508,7 @@ function hideAllCertificates(){
 }
 
 // show sertificate preview
-function showCertPreview(id){
+function showCertPreview(id) {
     var preview = document.querySelector('.certPreview');
     var previewImg = document.querySelector('.certPreview img');
     previewImg.setAttribute('src', certificates[id].img)
@@ -494,7 +516,7 @@ function showCertPreview(id){
 }
 
 // hide certificates preview
-function hideCertPreview(){
+function hideCertPreview() {
     var preview = document.querySelector('.certPreview');
     preview.hidden = true;
 }
