@@ -90,9 +90,9 @@ var projects = [
         type: 'CSS'
     },{
         name: "Natalya's Studio - self service",
-        favicon: 'img/favicons/natasha-self-service.png',
+        favicon: 'img/favicons/NatalysStudio.png',
         color: 'black',
-        background: "img/Natalya'sStudio.png",
+        background: "img/natasha-self-service.png",
         url: 'https://plando.co.il/dashboard',
         type: 'External'
     },{
