@@ -89,7 +89,14 @@ var projects = [
         url: 'https://avitalpas.github.io/UserManagement',
         type: 'CSS'
     },{
-        name: "Natalya's Studio",
+        name: "Natalya's Studio - self service",
+        favicon: 'img/favicons/natasha-self-service.png',
+        color: 'black',
+        background: "img/Natalya'sStudio.png",
+        url: 'https://plando.co.il/dashboard',
+        type: 'External'
+    },{
+        name: "Natalya's Studio - management",
         favicon: 'img/favicons/NatalysStudio.png',
         color: 'black',
         background: "img/Natalya'sStudio.png",
@@ -104,7 +111,12 @@ var certificates = [
         name: 'Front-End Development',
         file: 'cert/Front-End Development.pdf',
         img: 'cert/Front-End Development.png'
-    },{
+    // },{
+    //     name: 'Back-End Development',
+    //     file: 'cert/Back-End Development.pdf',
+    //     img: 'cert/Back-End Development.png'
+    // },
+    ,{
         name: 'DBA Master',
         file: 'cert/DBA Master.pdf',
         img: 'cert/DBA Master.png'
