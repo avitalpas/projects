@@ -17,7 +17,7 @@ var projects = [
         background: 'img/NDSN remote support.png',
         color: '#3F3F3F',
         url: 'https://4455.co.il',
-        type: 'JavaScript'
+        type: 'WordPress'
     },{
         name: "Dani'z Music Studio",
         favicon: 'img/favicons/DanizMusic.ico',
