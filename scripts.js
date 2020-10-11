@@ -111,6 +111,7 @@ var certificates = [
         name: 'Front-End Development',
         file: 'cert/Front-End Development.pdf',
         img: 'cert/Front-End Development.png'
+    }
     // },{
     //     name: 'Back-End Development',
     //     file: 'cert/Back-End Development.pdf',
