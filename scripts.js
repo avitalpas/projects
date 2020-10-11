@@ -58,7 +58,7 @@ var projects = [
         color: '#A12A99',
         favicon: 'img/favicons/SmartHouse.png',
         background: 'img/smartHouse.png',
-        url: 'https://avitalpas.github.io/smarthouse',
+        url: 'https://smarthouse-avital.herokuapp.com',
         type: 'React'
     }, {
         name: 'Lazy block',
