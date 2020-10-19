@@ -28,7 +28,7 @@ var projects = [
     },{
         name: "Dani'z Music Studio management",
         favicon: 'img/favicons/DanizMusic.ico',
-        background: 'img/danizstudio.png',
+        background: 'img/daniz-mng.png',
         color: '#37729B',
         url: 'https://danizstudio.herokuapp.com/',
         type: 'Node.js'
