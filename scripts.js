@@ -11,21 +11,28 @@ var projects = [
         url: 'https://ndsn.net/',
         color: '#3F3F3F',
         type: 'WordPress'
-    }, {
+    },{
         name: 'NDSN remote support',
         favicon: 'img/favicons/NDSN.png',
         background: 'img/NDSN remote support.png',
         color: '#3F3F3F',
         url: 'https://4455.co.il',
         type: 'WordPress'
-    }, {
+    },{
         name: "Dani'z Music Studio",
         favicon: 'img/favicons/DanizMusic.ico',
         background: 'img/danizstudio.png',
         color: '#37729B',
         url: 'https://www.danizstudio.co.il/',
         type: 'Site123'
-    }, {
+    },{
+        name: "Dani'z Music Studio management",
+        favicon: 'img/favicons/DanizMusic.ico',
+        background: 'img/danizstudio.png',
+        color: '#37729B',
+        url: 'https://danizstudio.herokuapp.com/',
+        type: 'Node.js'
+    },{
         name: 'Movie Reviews',
         favicon: 'img/favicons/movie-reviews.png',
         background: 'img/movie-reviews.png',
