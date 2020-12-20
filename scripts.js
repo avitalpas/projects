@@ -125,13 +125,11 @@ var certificates = [
         name: 'Front-End Development',
         file: 'cert/Front-End Development.pdf',
         img: 'cert/Front-End Development.png'
-    }
-    // },{
-    //     name: 'Back-End Development',
-    //     file: 'cert/Back-End Development.pdf',
-    //     img: 'cert/Back-End Development.png'
-    // },
-    , {
+    },{
+        name: 'Back-End Developement',
+        file: 'cert/Back-End Developement - SVCollage.pdf',
+        img: 'cert/Back-End Developement - SVCollage.png'
+    },{
         name: 'DBA Master',
         file: 'cert/DBA Master.pdf',
         img: 'cert/DBA Master.png'
