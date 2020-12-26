@@ -40,20 +40,27 @@ var projects = [
         url: 'https://danizstudio.herokuapp.com/',
         type: 'Node.js'
     },{
+        name: 'מתכונים של הפסטרנקים',
+        favicon: 'img/favicons/pasternak-food.png',
+        background: 'img/pasternak-food.png',
+        color: 'black',
+        url: 'https://pasternak-food.herokuapp.com/',
+        type: 'Node.js'
+    },{
         name: 'Movie Reviews',
         favicon: 'img/favicons/movie-reviews.png',
         background: 'img/movie-reviews.png',
         color: 'black',
         url: 'https://intense-castle-88427.herokuapp.com/',
         type: 'Node.js'
-    }, {
+    },{
         name: 'Fibonacci',
         favicon: 'img/favicons/Fibonnaci.png',
         background: 'img/Fibonacci.png',
         color: 'black',
         url: 'https://avitalpas.github.io/FibonacciCheck/',
         type: 'JavaScript'
-    }, {
+    },{
         name: 'Goldfish Kids',
         favicon: 'img/favicons/GoldfishKids.png',
         background: 'img/GoldfishKids.png',
