@@ -170,7 +170,12 @@ var links = [
         url: 'https://fonts.google.com',
         type: 'style',
         icon: 'https://www.gstatic.com/images/branding/product/ico/google_fonts_blue_lodp.ico'
-    }, {
+    },{
+        name: 'Emoji & symbols',
+        url: 'https://html-css-js.com/html/character-codes/',
+        type: 'essentials',
+        icon: ''
+    },{
         name: 'Color from image',
         url: 'https://image-color.com/',
         type: 'style',
