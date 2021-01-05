@@ -61,6 +61,13 @@ var projects = [
         url: 'https://avitalpas.github.io/FibonacciCheck/',
         type: 'JavaScript'
     },{
+        name: 'Aura Salon',
+        favicon: 'img/favicons/Aura Salon.png',
+        background: 'img/Aura Salon.png',
+        color: '#bd8bca',
+        url: 'http://5d4ece0727914.site123.me/',
+        type: 'Site123'
+    },{
         name: 'Goldfish Kids',
         favicon: 'img/favicons/GoldfishKids.png',
         background: 'img/GoldfishKids.png',
