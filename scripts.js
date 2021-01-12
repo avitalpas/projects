@@ -178,6 +178,11 @@ var links = [
         type: 'style',
         icon: 'https://www.gstatic.com/images/branding/product/ico/google_fonts_blue_lodp.ico'
     },{
+        name: 'Upload image',
+        url: 'https://imgbb.com/',
+        type: 'essentials',
+        icon: ''
+    },{
         name: 'Emoji & symbols',
         url: 'https://html-css-js.com/html/character-codes/',
         type: 'essentials',
