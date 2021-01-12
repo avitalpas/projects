@@ -183,6 +183,11 @@ var links = [
         type: 'essentials',
         icon: ''
     },{
+        name: 'CSS gradiant backgrounds',
+        url: 'https://uigradients.com/',
+        type: 'css',
+        icon: ''
+    },{
         name: 'Color from image',
         url: 'https://image-color.com/',
         type: 'style',
