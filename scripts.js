@@ -170,7 +170,7 @@ var certificates = [
     }, {
         name: 'CSS',
         file: 'cert/CSS.pdf',
-        img: 'cert/CSS.png'
+        img: 'cert/CSS.jpg'
     }
 ]
 
