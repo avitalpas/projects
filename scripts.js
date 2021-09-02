@@ -167,6 +167,10 @@ var certificates = [
         name: 'SQL',
         file: 'cert/SQL.pdf',
         img: 'cert/SQL.png'
+    }, {
+        name: 'CSS',
+        file: 'cert/CSS.pdf',
+        img: 'cert/CSS.png'
     }
 ]
 
