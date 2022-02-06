@@ -12,6 +12,13 @@ var projects = [
         color: '#3F3F3F',
         type: 'WordPress'
     },{
+        name: 'ללמוד בכיף',
+        favicon: 'img/favicons/APLearn.png',
+        background: 'img/APLearn.png',
+        url: 'hhttps://www.ap-learn.co.il/',
+        color: '#CD786D',
+        type: 'Site123'
+    },{
         name: 'NDSN remote support',
         favicon: 'img/favicons/NDSN.png',
         background: 'img/NDSN remote support.png',
