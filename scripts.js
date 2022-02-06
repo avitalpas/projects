@@ -15,7 +15,7 @@ var projects = [
         name: 'ללמוד בכיף',
         favicon: 'img/favicons/APLearn.png',
         background: 'img/APLearn.png',
-        url: 'hhttps://www.ap-learn.co.il/',
+        url: 'https://www.ap-learn.co.il/',
         color: '#CD786D',
         type: 'Site123'
     },{
@@ -180,6 +180,27 @@ var certificates = [
         img: 'cert/CSS.png'
     }
 ]
+
+// linkes type icons
+var linksIcons = [
+    {
+        type: 'style',
+        icon: '<i class="fab fa-sketch"></i>'
+    },
+    {
+        type: 'css',
+        icon: '<i class="fab fa-css3-alt"></i>'
+    },
+    {
+        type: 'hovers',
+        icon: '<i class="fas fa-mouse-pointer"></i>'
+    },
+    {
+        type: 'essentials',
+        icon: '<i class="fas fa-life-ring"></i>'
+    }
+]
+
 
 // links
 var links = [
@@ -363,13 +384,24 @@ for (i = 0; i < links.length; i++) {
         category.id = links[i].type;
         category.hidden = true;
 
+        // create header div
+        var headerDiv = document.createElement('div')
+
         // create type header
         var header = document.createElement('h4');
         header.innerHTML = links[i].type;
 
         // create icon
-        var icon = document.createElement('img')
-        icon.src = links[i].icon
+        var linkIcon = document.createElement('div');
+        var isIconExists = linksIcons.find( curLink => curLink.type === links[i].type )
+        if(isIconExists != undefined) {
+
+            console.log('Type: ' + links[i].type + '|' + isIconExists.icon)
+            headerDiv.innerHTML = isIconExists.icon
+        }
+
+        // append h4 and icon to headerDiv
+        headerDiv.appendChild(header);
 
         // create new link
         var a = document.createElement('a');
@@ -379,7 +411,7 @@ for (i = 0; i < links.length; i++) {
         a.target = '_blank';
 
         // append childs
-        category.appendChild(header);
+        category.appendChild(headerDiv);
         category.appendChild(a);
         linksContainter.appendChild(category);
     }
@@ -490,7 +522,6 @@ function hideAllProjects() {
 
     console.log('hiding all projects')
     for (let i = 0; i < projectDivs.length; i++) {
-        console.log('project: ' + i)
         projectDivs[i].classList.remove('fade-in-fwd');
         projectDivs[i].classList.add('fade-out-bck');
         projectDivs[i].hidden = true;
@@ -502,7 +533,6 @@ function showAllProjects() {
 
     console.log('showing all projects')
     for (let i = 0; i < projectDivs.length; i++) {
-        console.log('project: ' + i)
         projectDivs[i].hidden = false;
         projectDivs[i].classList.remove('fade-out-bck');
         projectDivs[i].classList.add('fade-in-fwd');
@@ -515,7 +545,6 @@ function showProjectByValue(value) {
 
     for (let i = 0; i < projectDivs.length; i++) {
         if (projectDivs[i].getAttribute('data-type') == value) {
-            console.log('project: ' + i)
             projectDivs[i].hidden = false;
             projectDivs[i].classList.remove('fade-out-bck');
             projectDivs[i].classList.add('fade-in-fwd');

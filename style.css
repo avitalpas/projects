@@ -146,9 +146,7 @@ p{
 }
 
 .linkCategory h4{
-    border-radius: 5px 5px 0 0;
-    color: white;
-    background-color: rgb(155, 4, 4);
+    color: rgb(155, 4, 4);
     padding-top: 7px;
     padding-bottom: 7px;
     font-weight: 400;
@@ -160,7 +158,7 @@ p{
     padding: 10px 15px;
     transition: .5s;
     width: 100%;
-    text-align: center;
+    text-align: left;
 }
 
 .linksContainter a:hover{
