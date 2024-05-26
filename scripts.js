@@ -26,13 +26,6 @@ var projects = [
         url: 'https://4455.co.il',
         type: 'WordPress'
     },{
-        name: 'NDSN management',
-        favicon: 'img/favicons/NDSN.png',
-        background: 'img/NDSN-mng.png',
-        color: '#3F3F3F',
-        url: 'https://ndsn-mng.herokuapp.com/',
-        type: 'Node.js'
-    },{
         name: "Dani'z Music Studio",
         favicon: 'img/favicons/DanizMusic.ico',
         background: 'img/danizstudio.png',
@@ -40,26 +33,12 @@ var projects = [
         url: 'https://www.danizstudio.co.il/',
         type: 'Site123'
     },{
-        name: "Dani'z Music Studio management",
-        favicon: 'img/favicons/DanizMusic.ico',
-        background: 'img/daniz-mng.png',
-        color: '#37729B',
-        url: 'https://danizstudio.herokuapp.com/',
-        type: 'Node.js'
-    },{
-        name: 'מתכונים של הפסטרנקים',
+        name: 'במטבח של הפסטרנקים',
         favicon: 'img/favicons/pasternak-food.png',
         background: 'img/pasternak-food.png',
         color: 'black',
-        url: 'https://pasternak-food.herokuapp.com/',
-        type: 'Node.js'
-    },{
-        name: 'Movie Reviews',
-        favicon: 'img/favicons/movie-reviews.png',
-        background: 'img/movie-reviews.png',
-        color: 'black',
-        url: 'https://intense-castle-88427.herokuapp.com/',
-        type: 'Node.js'
+        url: 'https://www.pasternak-kitchen.co.il/',
+        type: 'Site123'
     },{
         name: 'Fibonacci',
         favicon: 'img/favicons/Fibonnaci.png',
@@ -67,13 +46,6 @@ var projects = [
         color: 'black',
         url: 'https://avitalpas.github.io/FibonacciCheck/',
         type: 'JavaScript'
-    },{
-        name: 'Aura Salon',
-        favicon: 'img/favicons/Aura Salon.png',
-        background: 'img/Aura Salon.png',
-        color: '#bd8bca',
-        url: 'http://5d4ece0727914.site123.me/',
-        type: 'Site123'
     },{
         name: 'Goldfish Kids',
         favicon: 'img/favicons/GoldfishKids.png',
@@ -88,14 +60,7 @@ var projects = [
         color: '#040404',
         url: 'https://avitalpas.github.io/Sudoku',
         type: 'JavaScript'
-    }, {
-        name: 'Smart House',
-        color: '#A12A99',
-        favicon: 'img/favicons/SmartHouse.png',
-        background: 'img/smartHouse.png',
-        url: 'https://smarthouse-avital.herokuapp.com',
-        type: 'React'
-    }, {
+    },{
         name: 'Lazy block',
         favicon: 'img/favicons/LazySquare.png',
         color: '#E13F1C',
