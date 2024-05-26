@@ -12,7 +12,7 @@ var projects = [
         color: '#3F3F3F',
         type: 'WordPress'
     },{
-        name: 'ללמוד בכיף',
+        name: 'הסיכומים של אביטל',
         favicon: 'img/favicons/APLearn.png',
         background: 'img/APLearn.png',
         url: 'https://www.ap-learn.co.il/',
